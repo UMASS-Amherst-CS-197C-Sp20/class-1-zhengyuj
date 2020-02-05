@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(int argc, char *argv[]) {
 	/*
@@ -12,7 +13,13 @@ int main(int argc, char *argv[]) {
 	*/
 	//////////Your code here//////////
 	//int secret = 77;
-  int secret = atoi(argv[0]);
+  int num = atoi(argv[0]);
+  printf("%d", num);
+  time_t t;
+  srand((unsigned) time(&t));
+  int secret = rand() % num + 1;
+  printf("%d", secret);
+
 	//////////End of the code/////////
 
 	printf("Welcome to my guessing game!\n");
