@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	*/
 	//////////Your code here//////////
 	//int secret = 77;
-  int num = atoi(argv[0]);
+  int num = atoi(argv[1]);
   printf("%d", num);
   time_t t;
   srand((unsigned) time(&t));
