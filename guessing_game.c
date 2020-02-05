@@ -14,11 +14,11 @@ int main(int argc, char *argv[]) {
 	//////////Your code here//////////
 	//int secret = 77;
   int num = atoi(argv[1]);
-  printf("%d", num);
+  printf("Input %d\n", num);
   time_t t;
   srand((unsigned) time(&t));
   int secret = rand() % num + 1;
-  printf("%d", secret);
+  printf("Secret number %d\n", secret);
 
 	//////////End of the code/////////
 
