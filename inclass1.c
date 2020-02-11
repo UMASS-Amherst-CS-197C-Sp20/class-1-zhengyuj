@@ -2,9 +2,17 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <float.h>
+#include <string.h>
 
 void func(int i);
 void func1(int* i);
+
+void print_string(char* s){
+  printf("%lu", strlen(s));
+  for(int i = 0; i < strlen(s); i++){
+    printf("%c", s[i]);
+  }
+}
 
 int main(int argc, char** argv){
 	printf("---Lets see the size of the data types---\n");
@@ -30,8 +38,12 @@ int main(int argc, char** argv){
 		print the size of a type plus another type, see the example
 		int+long
 	*/
-	printf("#####student code start#####\n");
+  
+  printf("#####student code start#####\n");
 	//////////Your code here//////////
+  int type_short = 5;
+  double type_float = 3.6;
+  printf("size of short+float: %lu\n", sizeof(type_short+type_float));
 
 	//example
 	int type_int = 0;
@@ -81,7 +93,11 @@ int main(int argc, char** argv){
 	*/
 	printf("#####student code start#####\n");
     //////////Your code here//////////
-
+  printf("the value of max value of signed int + 1: %d\n", INT_MAX + 1);
+  printf("the value of max value of unsigned int + 1: %u\n", UINT_MAX + 1);
+  printf("the value of max value of signed long + 1: %ld\n", LONG_MAX + 1);
+  printf("the value of max value of float + 1: %g\n", FLT_MAX + 1);
+  printf("the value of max value of float + 1000: %g\n", FLT_MAX + 1000);
 	//////////End of the code/////////
 	printf("#####student code end#####\n");
 
@@ -96,6 +112,7 @@ int main(int argc, char** argv){
 		TODO:
 		Why we are getting this result?
 	*/
+  /* Because char* is a pointer. Whatever the pointer is, it has a size of 8 */
 
 	printf("\nIs 1 equals to true? \n");
 	//1 is true, 0 is false
@@ -124,8 +141,8 @@ int main(int argc, char** argv){
     }
 
     //TODO: uncommend below code after complete print_string fucntion
-    //print_string(s1);
-    //print_string(s2);
+    print_string(s1);
+    print_string(s2);
 
     //exit status for the OS, 0 means no error.
     //It is different than the C true/false value
